@@ -1,7 +1,7 @@
 <?php  
     //inicia a sessao e destroi todos os dados gravados em cache etc
-    session_start();
-    ob_start();
+    //session_start();
+    //ob_start();
     $_SESSION = array();
     if (ini_get("session.use_cookies")) {
         $params = session_get_cookie_params();

@@ -31,7 +31,7 @@ class Autentica extends Conexao{
 		$pdo = new Conexao(); 
 		//chamo o método select da classe conexão que retornará um conjunto de dados
 		//$resultado = $pdo->select("SELECT * FROM users WHERE user = '".$this->user."' AND pass = '".$this->pass."'");
-		$resultado = $pdo->select("SELECT * FROM cliente WHERE emailCliente = '".$this->emailCliente."' AND senhaCliente = '".$this->senhaCliente."'");
+		$resultado = $pdo->select("SELECT * FROM administrador WHERE emailAdministrador = '".$this->emailAdministrador."' AND senhaAdministrador = '".$this->senhaAdministrador."'");
 		//desconecto
 		$pdo->desconectar();
 		//resgato os valores obtidos pelo método através do foreach
@@ -43,10 +43,10 @@ class Autentica extends Conexao{
 				//session_start();
 				//ob_start();
 				//seto as session com os valores obtido da tabela
-				$_SESSION['pk_idCliente'] = $res['pk_idCliente'];
-				$_SESSION['emailCliente'] = $res['emailCliente'];
-				$_SESSION['nomeCliente'] = $res['nomeCliente'];
-				$_SESSION['senhaCliente'] = $res['senhaCliente'];
+				$_SESSION['pk_idAdministrador'] = $res['pk_idAdministrador'];
+				$_SESSION['emailAdministrador'] = $res['emailAdministrador'];
+				$_SESSION['nomeAdministrador'] = $res['nomeAdministrador'];
+				$_SESSION['senhaAdministrador'] = $res['senhaAdministrador'];
 				//$_SESSION['restricao'] = $res['restricao'];
 				$_SESSION['logado'] = 'S';
 		}

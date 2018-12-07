@@ -36,9 +36,9 @@
         //método que conecta com o banco de dados
         public function conectar() {
             try{
-                $this->pdo = new PDO("mysql:host=127.0.0.1:3306;dbname=dbnadjaboutique",//coloque o ip da base e depois o nome do banco
-                                "root",//usuario do seu banco
-                                "",//senha do seu banco
+                $this->pdo = new PDO("mysql:host=localhost;dbname=id8003811_dbnadjaboutique",//coloque o ip da base e depois o nome do banco
+                                "id8003811_root",//usuario do seu banco
+                                "dbnadjaboutique",//senha do seu banco
                                 array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));                      
             }catch (PDOException $e) {
                 print "Error!: " . $e->getMessage() ."<br/>";
